@@ -40,13 +40,22 @@ export interface ChartConfig {
   };
   options: {
     responsive: boolean;
+    indexAxis?: 'x' | 'y';
     plugins: {
       tooltip: ChartTheme['tooltip'] & Record<string, unknown>;
       legend: ChartTheme['legend'] & Record<string, unknown>;
     };
     scales: {
-      x: { grid: ChartTheme['grid'] & Record<string, unknown>; ticks: Record<string, unknown> };
-      y: { grid: ChartTheme['grid'] & Record<string, unknown>; ticks: Record<string, unknown> };
+      x: {
+        grid: ChartTheme['grid'] & Record<string, unknown>;
+        ticks: Record<string, unknown>;
+        stacked?: boolean;
+      };
+      y: {
+        grid: ChartTheme['grid'] & Record<string, unknown>;
+        ticks: Record<string, unknown>;
+        stacked?: boolean;
+      };
     };
   };
 }

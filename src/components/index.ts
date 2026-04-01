@@ -2,3 +2,4 @@
 export const __components_placeholder = true;
 
 export * from './NoopButton';
+export * from './BarChart';
