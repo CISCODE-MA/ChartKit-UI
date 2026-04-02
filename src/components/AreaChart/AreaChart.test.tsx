@@ -173,4 +173,12 @@ describe('AreaChart', () => {
     expect(options.plugins.legend.position).toBe('bottom');
     expect(options.responsive).toBe(true);
   });
+
+  it('should handle empty data array without crash', () => {
+    render(<AreaChart data={[]} theme={theme} />);
+    const canvas = screen.getByTestId('area-canvas');
+    const data = JSON.parse(canvas.getAttribute('data-data')!);
+    expect(data.labels).toEqual([]);
+    expect(data.datasets).toEqual([]);
+  });
 });

@@ -131,4 +131,12 @@ describe('LineChart', () => {
     expect(options.plugins.legend.position).toBe('bottom');
     expect(options.responsive).toBe(true);
   });
+
+  it('should handle empty data array without crash', () => {
+    render(<LineChart data={[]} theme={theme} />);
+    const canvas = screen.getByTestId('line-canvas');
+    const data = JSON.parse(canvas.getAttribute('data-data')!);
+    expect(data.labels).toEqual([]);
+    expect(data.datasets).toEqual([]);
+  });
 });

@@ -155,4 +155,12 @@ describe('BarChart', () => {
     expect(options.scales.y.stacked).toBe(true);
     expect(options.indexAxis).toBe('y');
   });
+
+  it('should handle empty data array without crash', () => {
+    render(<BarChart data={[]} theme={theme} />);
+    const canvas = screen.getByTestId('bar-canvas');
+    const data = JSON.parse(canvas.getAttribute('data-data')!);
+    expect(data.labels).toEqual([]);
+    expect(data.datasets).toEqual([]);
+  });
 });
