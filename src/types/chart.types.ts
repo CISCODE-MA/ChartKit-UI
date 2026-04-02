@@ -66,4 +66,5 @@ export interface ChartConfigDataset {
   backgroundColor: string | string[];
   borderColor: string;
   fill?: boolean;
+  tension?: number;
 }
