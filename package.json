@@ -5,6 +5,10 @@
   "license": "MIT",
   "private": false,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CISCODE-MA/ChartKit-UI.git"
+  },
   "sideEffects": false,
   "files": [
     "dist"
