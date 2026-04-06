@@ -2,3 +2,4 @@
 export const __utils_placeholder = true;
 
 export * from './noop';
+export * from './buildChartConfig';
