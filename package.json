@@ -1,6 +1,6 @@
 {
   "name": "@ciscode/ui-chart-kit",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Typed React chart components (Bar, Line, Area) built on Chart.js — no raw Chart.js config required.",
   "license": "MIT",
   "private": false,
