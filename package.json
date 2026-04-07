@@ -1,10 +1,14 @@
 {
-  "name": "@ciscode/reactts-developerkit",
-  "version": "1.0.0",
-  "description": "React TypeScript hybrid library template (components + hooks + utils).",
+  "name": "@ciscode/ui-chart-kit",
+  "version": "0.0.1",
+  "description": "Typed React chart components (Bar, Line, Area) built on Chart.js — no raw Chart.js config required.",
   "license": "MIT",
   "private": false,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CISCODE-MA/ChartKit-UI"
+  },
   "sideEffects": false,
   "files": [
     "dist"
@@ -80,5 +84,9 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "react-chartjs-2": "^5.3.1"
   }
 }
